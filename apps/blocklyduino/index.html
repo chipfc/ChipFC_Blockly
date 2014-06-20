@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html manifest=node.manifest>
+<head>
+  <meta charset="utf-8">
+  <title>BlocklyDuino</title>
+  <!--script type="text/javascript" src="../blockly_compressed.js"></script-->
+  <script type="text/javascript" src="Blob.js"></script>
+  <script type="text/javascript" src="FileSaver.min.js"></script>
+  <script type="text/javascript" src="blockly_helper.js"></script>
+  <script type="text/javascript" src="setup.js"></script>
+   
+  <!-- Bootstrap core CSS -->
+  <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+
+  <link href="style.css" rel="stylesheet">
+  <link href="theme.css" rel="stylesheet">
+  
+    <script src="jquery.min.js"></script>
+    <script src="../../bootstrap/js/bootstrap.min.js"></script>
+	
+</head>
+<body role="document">
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://wiki.chipfc.com/blockly">Chipi Blockly</a>
+        </div>
+        <div class="navbar-collapse collapse navbar-right">
+          <ul class="nav navbar-nav">
+            <li><a href="http://www.chipfc.com" target="_blank">Store</a></li>
+            <li><a href="http://wiki.chipfc.com" target="_blank">Wiki</a></li>
+            <li><a href="http://cloud.chipfc.com" target="_blank">Resource</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-container" role="main">
+
+	  <div id="mainframe">
+		  <table height="100%" width="100%">
+			<tr>
+			  <td>
+				<table>
+				  <tr id="tabRow" height="1em">
+					<td id="tab_blocks" class="tabon" onclick="tabClick(this.id)">Blocks</td>
+					<td class="tabmin">&nbsp;</td>
+					<td id="tab_arduino" class="taboff" onclick="tabClick(this.id)">Arduino</td>
+					<td class="tabmin">&nbsp;</td>
+					<td id="tab_xml" class="taboff" style="display:none" onclick="tabClick(this.id)">XML</td>
+					<td class="tabmax">
+					  <button onclick="discard()">Xóa hết</button>
+					  <button onclick="save()">Lưu</button>
+					  <button id="fakeload">Mở</button>
+					  <input type="file" id="load" style="display: none;"/>
+					</td>
+				  </tr>
+				</table>
+			  </td>
+			</tr>
+			<tr>
+			  <td height="99%">
+				<iframe id="content_blocks" src="frame.html"></iframe>
+				<div id="content_arduino">
+				  <textarea id="textarea_arduino" readonly></textarea>
+				</div>
+				<div id="content_xml">
+				  <textarea id="textarea_xml" readonly></textarea>
+				</div>
+			  </td>
+			</tr>
+		  </table>
+	  </div>
+	</div>
+</body>
+</html>
