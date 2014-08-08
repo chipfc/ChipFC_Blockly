@@ -7,9 +7,11 @@
 	margin: 0 auto;
 }
 
+<<<<<<< HEAD
 .bx-light{
 	padding: 20px;
-}
+=======
 .bx-test{
 	margin-left:10px;
+>>>>>>> test
 }
