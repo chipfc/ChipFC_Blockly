@@ -1,0 +1,8 @@
+.bx-wrapper .bx-viewport {
+	border: 0;
+	left: 0;
+}
+
+.bx-wrapper img {
+	margin: 0 auto;
+}
