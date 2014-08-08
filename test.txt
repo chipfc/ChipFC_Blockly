@@ -6,3 +6,7 @@
 .bx-wrapper img {
 	margin: 0 auto;
 }
+
+.bx-test{
+	margin-left:10px;
+}
