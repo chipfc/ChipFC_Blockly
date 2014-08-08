@@ -6,3 +6,7 @@
 .bx-wrapper img {
 	margin: 0 auto;
 }
+
+.bx-light{
+	padding: 20px;
+}
